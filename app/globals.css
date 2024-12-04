@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Background and Foreground */
+  --background: 40 33 95;
+  --foreground: 30 28 20;
+
+  /* Card Colors */
+  --card: 40 33 92;
+  --card-foreground: 30 28 15;
+
+  /* Popover Colors */
+  --popover: 40 33 90;
+  --popover-foreground: 30 28 15;
+
+  /* Primary Colors */
+  --primary-h: 36;
+  --primary-s: 44;
+  --primary-l: 38;
+  --primary: var(--primary-h) var(--primary-s) var(--primary-l);
+  --primary-foreground: 0 0 100;
+
+  /* Secondary Colors */
+  --secondary-h: 43;
+  --secondary-s: 33;
+  --secondary-l: 49;
+  --secondary: var(--secondary-h) var(--secondary-s) var(--secondary-l);
+  --secondary-foreground: 30 28 20;
+
+  /* Tertiary Colors */
+  --tertiary-h: 20;
+  --tertiary-s: 57;
+  --tertiary-l: 29;
+  --tertiary: var(--tertiary-h) var(--tertiary-s) var(--tertiary-l);
+  --tertiary-foreground: 0 0 100;
+
+  /* Accent Colors */
+  --accent-h: 9;
+  --accent-s: 28;
+  --accent-l: 22;
+  --accent: var(--accent-h) var(--accent-s) var(--accent-l);
+  --accent-foreground: 0 0 100;
+
+  /* Destructive Colors */
+  --destructive-h: 9;
+  --destructive-s: 78;
+  --destructive-l: 32;
+  --destructive: var(--destructive-h) var(--destructive-s) var(--destructive-l);
+  --destructive-foreground: 0 0 100;
+
+  /* Muted Colors */
+  --muted-h: 40;
+  --muted-s: 33;
+  --muted-l: 85;
+  --muted: var(--muted-h) var(--muted-s) var(--muted-l);
+  --muted-foreground: 30 28 40;
+
+  /* Input and Border Colors */
+  --input: 40 33 85;
+  --ring: 30 44 38;
+  --border: 30 28 80;
+
+  /* Radius */
+  --radius: 0.5rem;
+
+  /* Text Variants */
+  --text-primary: var(--primary);
+  --text-secondary: var(--secondary);
+  --text-tertiary: var(--tertiary);
+  --text-muted: var(--muted-foreground);
+  --text-inverse: 0 0 100;
+}
+
+.dark {
+  /* Background and Foreground */
+  --background: 30 28 12;
+  --foreground: 40 33 95;
+
+  /* Card Colors */
+  --card: 30 28 15;
+  --card-foreground: 40 33 95;
+
+  /* Popover Colors */
+  --popover: 30 28 10;
+  --popover-foreground: 40 33 95;
+
+  /* Primary Colors */
+  --primary-h: 33;
+  --primary-s: 65;
+  --primary-l: 49;
+  --primary: var(--primary-h) var(--primary-s) var(--primary-l);
+  --primary-foreground: 30 28 15;
+
+  /* Secondary Colors */
+  --secondary-h: 20;
+  --secondary-s: 57;
+  --secondary-l: 29;
+  --secondary: var(--secondary-h) var(--secondary-s) var(--secondary-l);
+  --secondary-foreground: 40 33 95;
+
+  /* Tertiary Colors */
+  --tertiary-h: 15;
+  --tertiary-s: 68;
+  --tertiary-l: 45;
+  --tertiary: var(--tertiary-h) var(--tertiary-s) var(--tertiary-l);
+  --tertiary-foreground: 0 0 100;
+
+  /* Accent Colors */
+  --accent-h: 43;
+  --accent-s: 33;
+  --accent-l: 49;
+  --accent: var(--accent-h) var(--accent-s) var(--accent-l);
+  --accent-foreground: 30 28 15;
+
+  /* Destructive Colors */
+  --destructive-h: 15;
+  --destructive-s: 68;
+  --destructive-l: 45;
+  --destructive: var(--destructive-h) var(--destructive-s) var(--destructive-l);
+  --destructive-foreground: 0 0 100;
+
+  /* Muted Colors */
+  --muted-h: 30;
+  --muted-s: 28;
+  --muted-l: 20;
+  --muted: var(--muted-h) var(--muted-s) var(--muted-l);
+  --muted-foreground: 40 33 70;
+
+  /* Input and Border Colors */
+  --input: 30 28 20;
+  --ring: 40 81 63;
+  --border: 30 28 30;
+
+  /* Radius */
+  --radius: 0.5rem;
+
+  /* Text Variants */
+  --text-primary: var(--primary);
+  --text-secondary: var(--secondary);
+  --text-tertiary: var(--tertiary);
+  --text-muted: var(--muted-foreground);
+  --text-inverse: 0 0 0;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--accent));
+  border-radius: 6px;
+  border: 3px solid hsl(var(--background));
+}
+
+/* Smooth transitions */
+* {
+  transition: 
+    background-color 0.3s ease, 
+    color 0.2s ease,
+    border-color 0.3s ease;
+}
+
+/* Utility classes for text colors */
+.text-primary {
+  color: hsl(var(--text-primary));
+}
+
+.text-secondary {
+  color: hsl(var(--text-secondary));
+}
+
+.text-tertiary {
+  color: hsl(var(--text-tertiary));
+}
+
+.text-muted {
+  color: hsl(var(--text-muted));
+}
+
+.text-inverse {
+  color: hsl(var(--text-inverse));
+}
+
+/* Additional Shadcn/UI component utility classes */
+.bg-card {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+}
+
+.bg-popover {
+  background-color: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+}
+
+.border-input {
+  border-color: hsl(var(--input));
+}
+
+.bg-muted {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+}
+
+.text-destructive {
+  color: hsl(var(--destructive));
+}
+
+.bg-destructive {
+  background-color: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
