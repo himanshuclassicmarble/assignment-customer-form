@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CMC_assignment1
 This repository contains a React component for a customer information form built using the react-hook-form library and validated with zod. The form allows users to input and submit customer details, including personal information, project details, and payment status.
 
@@ -39,3 +40,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 Preview Link: [cmc-assignment-1](https://cmc-assignment-1-k6slyndob.vercel.app)
+=======
+# assignment-customer-form
+This repository contains a React component for a customer information form built using the react-hook-form library and validated with zod. The form allows users to input and submit customer details, including personal information, project details, and payment status.
+>>>>>>> bb84233c94a9f66898f64f635a33bc292b10f75a
